@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propose Performance</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: purple; /* Purple background color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 300px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        select,
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Propose a Performance</h1>
+    <form action="/propose-performance" method="post">
+        <label for="performanceType">Performance Type: </label>
+        <select name="performanceType" id="performanceType" required>
+            <option value="movie">Movie</option>
+            <option value="music">Music</option>
+        </select>
+        <br>
+        <label for="duration">Duration: </label>
+        <input type="text" name="duration" id="duration" required>
+        <br>
+        <label for="specialRequirements">Special Requirements: </label>
+        <textarea name="specialRequirements" id="specialRequirements" rows="4" cols="50"></textarea>
+        <br>
+        <button type="submit">Propose Performance</button>
+    </form>
+</body>
+</html>
+

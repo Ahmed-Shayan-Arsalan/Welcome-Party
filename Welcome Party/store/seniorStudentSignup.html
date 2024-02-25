@@ -1,0 +1,33 @@
+<!-- seniorStudentSignup.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senior Student Signup</title>
+</head>
+<body>
+  <h1>Senior Student Signup</h1>
+  <form action="/senior-student-signup" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <br>
+    <label for="managertype">Manager Type:</label>
+    <select id="managertype" name="managertype" required>
+      <option value="dinner">Dinner Manager</option>
+      <option value="performance">Performance Manager</option>
+      <option value="invitation">Invitation Manager</option>
+      <option value="budget">Budget Manager</option>
+    </select>
+    <br>
+    <button type="submit">Signup</button>
+  </form>
+</body>
+</html>

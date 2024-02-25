@@ -1,0 +1,66 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Dashboard</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: purple; /* Purple background color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h2 {
+            color: #fff;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #4caf50;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Universal Dashboard</h2>
+    
+    <!-- Add navigation links to other pages -->
+    <ul>
+        <li><a href="/signup">Student Signup</a></li>
+        <li><a href="/login">Student Login</a></li>
+        <li><a href="/forgot-password">Forgot Password Student</a></li>
+        <li><a href="/teacher-registration">Teacher Registration</a></li> <!-- New button for teacher registration -->
+        <li><a href="/teacher-login">Teacher Login</a></li> <!-- New link for teacher login -->
+        <li><a href="/organizer-registration">Organizer Registration</a></li> <!-- New link for organizer registration -->
+        <li><a href="/organizer-login">Organizer Login</a></li> <!-- New link for organizer login -->
+        <li><a href="/principal-login">Principal Login</a></li> <!-- New link for principal login -->
+    </ul>
+</body>
+</html>

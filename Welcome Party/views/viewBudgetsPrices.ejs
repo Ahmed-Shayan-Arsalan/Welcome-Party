@@ -1,0 +1,79 @@
+<!-- viewBudgetsPrices.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Budgets and Prices</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        div {
+            width: 50%;
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #fff;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h2>View Budgets and Prices</h2>
+
+    <div>
+        <h3>Decoration Tasks</h3>
+        <ul>
+            <% decorationTasks.forEach(task => { %>
+                <li>
+                    <strong>ID:</strong> <%= task.id %><br>
+                    <strong>Task:</strong> <%= task.decoration_task %><br>
+                    <strong>Budget:</strong> $<%= task.budget %><br>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+
+    <div>
+        <h3>Menu Items</h3>
+        <ul>
+            <% menuItems.forEach(item => { %>
+                <li>
+                    <strong>ID:</strong> <%= item.id %><br>
+                    <strong>Item:</strong> <%= item.item %><br>
+                    <strong>Price:</strong> $<%= item.price %><br>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+</body>
+</html>

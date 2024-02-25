@@ -1,0 +1,51 @@
+<!-- organizerDashboard.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organizer Dashboard</title>
+</head>
+<body>
+  <h1>Organizer Dashboard</h1>
+
+  <!-- Form to assign decoration tasks -->
+  <form action="/assign-decoration" method="post">
+    <label for="student">Choose a student:</label>
+    <select name="student" id="student">
+      <% students.forEach(student => { %>
+        <option value="<%= student.id %>"><%= student.name %></option>
+      <% }); %>
+    </select>
+    <br>
+    <label for="decorationTask">Decoration Task:</label>
+    <input type="text" name="decorationTask" id="decorationTask" required>
+    <br>
+    <label for="budget">Budget:</label>
+    <input type="text" name="budget" id="budget" required>
+    <br>
+    <button type="submit">Assign Decoration Task</button>
+  </form>
+
+  <hr>
+
+  <!-- Display all students with their decoration tasks and budget -->
+  <h2>All Students and Their Tasks</h2>
+  <ul>
+    <% students.forEach(student => { %>
+      <li>
+        <strong><%= student.name %></strong>: <%= student.task || 'No task assigned' %>
+        <span>Budget: <%= student.budget || 'Not specified' %></span>
+        <!-- Form to update the budget -->
+        <form action="/update-budget" method="post" style="display: inline-block;">
+          <input type="hidden" name="studentId" value="<%= student.id %>">
+          <label for="newBudget">New Budget:</label>
+          <input type="text" name="newBudget" id="newBudget" required>
+          <button type="submit">Update Budget</button>
+        </form>
+      </li>
+    <% }); %>
+  </ul>
+</body>
+</html>
